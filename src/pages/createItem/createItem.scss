@@ -1,0 +1,14 @@
+.is-invalid-input {
+  border: 1px solid #ec1c24 !important;
+  // border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+.invalid-value {
+  background-color: #ec1c24;
+  border-radius: 0 0 5px 5px;
+  margin-top: -2px;
+  font-size: 12px;
+  text-align: end;
+  color: #fff;
+  padding: 2px 20px;
+  direction: rtl;
+}

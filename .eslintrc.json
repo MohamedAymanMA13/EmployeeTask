@@ -1,0 +1,91 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": [
+    "react-app",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/strict",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "plugin:i18next/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y", "prettier","i18next"],
+  "rules": {
+    "no-shadow": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/no-onchange":0,
+    "react-hooks/rules-of-hooks": "error",
+    "no-plusplus": 0,
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-props-no-spreading": 0,
+    "react/destructuring-assignment": "off",
+    "no-console": "warn",
+    "react/prop-types": 0,
+    // "quotes": ["error", "double"],
+    "no-useless-constructor": "error",
+    "no-duplicate-imports": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-cycle": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": 2,
+    "no-unused-vars":"warn",
+    "i18next/no-literal-string": ["warn", { "ignoreCallee": ["translate"], "onlyAttribute": ["children"] }]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
+}

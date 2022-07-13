@@ -1,0 +1,230 @@
+@import 'Variables.scss';
+
+.bgc-primary {
+  background-color: $primary-color;
+}
+.bgc-primary-hover:hover,
+.bgc-primary-hover:focus {
+  background-color: $primary-color-hover;
+  box-shadow: 0 0 0 0.15rem rgba($primary-color, 0.25);
+}
+.bgc-secondary {
+  background-color: $secondary-color;
+}
+.bgc-secondary-hover:hover {
+  background-color: $secondary-color-hover;
+}
+
+// coloers text
+.fc-primary {
+  color: $primary-color;
+}
+.fc-primary-hover:hover {
+  color: $primary-color-hover !important;
+}
+.fc-secondary {
+  color: $secondary-color;
+}
+//font size
+.fz8 {
+  font-size: 8px;
+}
+.fz10 {
+  font-size: 10px;
+}
+.fz11 {
+  font-size: 11px;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz13 {
+  font-size: 13px;
+}
+.fz14 {
+  font-size: 14px;
+}
+.fz15 {
+  font-size: 15px;
+}
+
+.fz16 {
+  font-size: 16px;
+}
+.fz20 {
+  font-size: 20px;
+}
+.fw-bold {
+  font-weight: 600;
+}
+::placeholder {
+  font-size: 12px;
+}
+//size images
+.img12 {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+.img14 {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+.img16 {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.img18 {
+  height: 18px;
+  object-fit: contain;
+  width: 18px;
+}
+.img20 {
+  height: 20px;
+  object-fit: contain;
+  width: 20px;
+}
+.img25 {
+  height: 25px;
+  object-fit: contain;
+  width: 25px;
+}
+.img30 {
+  height: 30px;
+  object-fit: contain;
+  width: 30px;
+}
+.img40 {
+  height: 40px;
+  object-fit: contain;
+  width: 40px;
+}
+.pointer {
+  cursor: pointer;
+}
+
+// text align
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.outline-none {
+  outline: none;
+}
+// border and shadow
+.main-shadow {
+  box-shadow: 4px 4px 20px #00000029;
+}
+// PC primary-color
+.border-PC {
+  border: 1px solid $primary-color !important;
+}
+.border-bottom-PC {
+  border-bottom: 2px solid $primary-color;
+}
+.b_r {
+  border-radius: 10px !important;
+}
+// custom behavior style
+.none-btn {
+  background-color: transparent;
+  border: none;
+  :focus {
+    outline: transparent;
+  }
+}
+button:focus {
+  outline: 0px;
+}
+a {
+  color: initial !important;
+  text-decoration: none !important;
+}
+//checkbox
+.checkbox {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.checkbox input[type='checkbox'] {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+  margin-left: -20px;
+}
+.checkbox label {
+  position: relative;
+}
+.checkbox label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 2px solid $primary-color;
+}
+.checkbox label:after {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 5px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  -webkit-transform: rotate(-45deg) scale(0);
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.25s;
+  will-change: transform;
+  position: absolute;
+  top: 9px;
+  left: 7px;
+}
+.checkbox input[type='checkbox']:checked ~ label::before {
+  color: $primary-color;
+  background-color: $primary-color;
+}
+
+.checkbox input[type='checkbox']:checked ~ label::after {
+  -webkit-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1);
+}
+
+.checkbox label {
+  min-height: 25px;
+  margin: 0;
+  width: fit-content;
+  display: block;
+  padding-left: 25px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+  vertical-align: sub;
+}
+.checkbox label span {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.checkbox input[type='checkbox']:focus + label::before {
+  outline: 0;
+}
+
+//  alert
+.Toastify__toast--success {
+  background-color: #25c2a0 !important;
+  color: #fff !important;
+  // font-weight: bold;
+}
+.Toastify__toast {
+  min-height: 55px !important;
+}

@@ -1,0 +1,6 @@
+public/
+build/
+node_modules/
+serviceWorker.js
+*.test.js
+jest.config.js
