@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Employee Management Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React frontend exercise for listing, creating, editing and deleting employee records through a REST API.
 
-## Available Scripts
+## Implementation
 
-In the project directory, you can run:
+- List and individual-record views.
+- Create and edit forms with Redux actions.
+- Axios requests for record operations.
+- Client-side routing, translations and toast-message components.
 
-### `npm start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React 17, JavaScript, Redux, Redux Thunk, Axios, React Router 5, Bootstrap 5, SCSS and i18next.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Local development
 
-### `npm test`
+Requires Node.js and npm. From the repository directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm install
+npm start
+```
 
-### `npm run build`
+The development frontend runs at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm run build
+npm test
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+These are the configured scripts. This project uses an older React Scripts 4 toolchain, so a compatible Node.js environment or dependency updates may be needed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Backend requirement and safety
 
-### `npm run eject`
+The UI depends on an employee API. Existing API calls are hard-coded in `src/redux/store/Employee/actions.js`; running the UI does not create a local backend. Before exercising any record operation, point every request to a backend you control, with synthetic test data. Do not submit create, update or delete requests to the original service.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The tracked environment files use an API-key-named variable for a server URL. A frontend environment variable is not a secret store. Never put passwords, private tokens or real employee data in client-side code.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Source guide
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `src/pages/`: list, create and edit views.
+- `src/redux/store/Employee/`: record requests and state.
+- `src/locales/`: translation resources.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This README describes the code structure, not a current backend-availability, test-pass or production-readiness guarantee.
